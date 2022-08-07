@@ -2,7 +2,7 @@
 
 LaraJet is a Great **CMS Application** built in Laravel & a Great **Starter Kit** for big web applications.
 
-It's an application to minimize your problems while creating a new web application with all the common features using Laravel Jetstream, based on Coders Free tutorial.
+It's an application to minimize your problems while creating a new web application with all the common features using Laravel Jetstream, AdminLTE with Bootstrap, based on Coders Free tutorial.
 
 ---
 
@@ -12,7 +12,6 @@ It's an application to minimize your problems while creating a new web applicati
 
 1. Laravel `9.0` (Will upgrade if needs)
 1. PHP `8.0`
-1. React JS
 1. Visual Studio Code
 
 ---
@@ -78,8 +77,8 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Robert Arias - [@robertjota](https://twitter.com/robertjota) - soporte@rrsistemas.ml
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/robertjota/larajet](https://github.com/robertjota/larajet)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
