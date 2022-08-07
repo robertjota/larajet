@@ -72,7 +72,7 @@ class PostController extends Controller
             $post->tags()->attach($request->tags);
         }
 
-        return redirect()->route('admin.posts.edit', $post);
+        return redirect()->route('admin.posts.index', $post);
     }
 
     /**
@@ -126,7 +126,7 @@ class PostController extends Controller
 
         Cache::flush();
 
-    return redirect()->route('admin.posts.edit', $post)->with('info', 'El post se actualizó con exito');
+    return redirect()->route('admin.posts.index', $post)->with('info', 'El post se actualizó con exito');
     }
 
     /**

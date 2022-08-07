@@ -1,21 +1,19 @@
 @extends('adminlte::page')
 
-@section('title', 'Editar Post')
+@section('title', 'Crear post')
 
 @section('content_header')
-    <h1>Editar Post</h1>
+    <h1>Crear Post</h1>
 @stop
 
 @section('content')
-
     <div class="card">
         <div class="card-body">
-            {!! Form::model($post, ['route'=> ['admin.posts.update', $post], 'autocomplete' => 'off', 'files' => true, 'method' => 'put']) !!}
+            {!! Form::open(['route'=> 'admin.posts.store', 'autocomplete' => 'off', 'files' => true]) !!}
 
                 @include('admin.posts.partials.form')
 
-                {!! Form::submit('Actualizar post', ['class' => 'btn btn-success pull-right']) !!}
-
+                {!! Form::submit('Crear post', ['class' => 'btn btn-success pull-right']) !!}
             {!! Form::close() !!}
         </div>
     </div>

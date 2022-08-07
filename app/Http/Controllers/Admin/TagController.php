@@ -48,6 +48,7 @@ class TagController extends Controller
      */
     public function store(Request $request)
     {
+
         $request->validate([
             'name' => 'required|min:3',
             'slug' => 'required|unique:tags',
@@ -56,7 +57,7 @@ class TagController extends Controller
 
         $tag = Tag::create($request->all());
 
-        return redirect()->route('admin.tags.edit', $tag)->with('info', 'La etiqueta se creo con éxito');
+        return redirect()->route('admin.tags.index', $tag)->with('info', 'La etiqueta se creo con éxito');
     }
 
     /**
@@ -109,7 +110,7 @@ class TagController extends Controller
 
         $tag->update($request->all());
 
-        return redirect()->route('admin.tags.edit', $tag)->with('info', 'La etiqueta se actualizó con éxito');
+        return redirect()->route('admin.tags.index', $tag)->with('info', 'La etiqueta se actualizó con éxito');
     }
 
     /**

@@ -10,11 +10,6 @@
 @stop
 
 @section('content')
-    @if (session('info'))
-        <div class="alert alert-success">
-            <strong>{{session('info')}}</strong>
-        </div>
-    @endif
 
     <div class="card">
         <div class="card-body">
@@ -54,12 +49,16 @@
     </div>
 @stop
 
-@section('css')
-<link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-
 @section('js')
     <script>
-        console.log('Hi!');
+        var info = "{{session('info')}}";
+        if (info) {
+            Swal.fire({
+                type: 'success',
+                title: '{{session('info')}}',
+                showConfirmButton: false,
+                timer: 2500
+            })
+        }
     </script>
 @stop

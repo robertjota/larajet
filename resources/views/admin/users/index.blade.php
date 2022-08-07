@@ -12,16 +12,16 @@
 
 @stop
 
-@section('css')
-<link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-
 @section('js')
-<script>
-    /* swal.fire(
-        'Buen Trabajo',
-        'esto es sweetalert2',
-        'success'
-    ) */
-</script>
+    <script>
+        var info = "{{session('info')}}";
+        if (info) {
+            Swal.fire({
+                type: 'success',
+                title: '{{session('info')}}',
+                showConfirmButton: false,
+                timer: 2500
+            })
+        }
+    </script>
 @stop

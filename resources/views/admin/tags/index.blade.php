@@ -10,11 +10,11 @@
 @stop
 
 @section('content')
-    @if (session('info'))
+    {{-- @if (session('info'))
         <div class="alert alert-success">
             <strong>{{session('info')}}</strong>
         </div>
-    @endif
+    @endif --}}
 
     <div class="card">
         <div class="card-body">
@@ -54,3 +54,16 @@
     </div>
 @stop
 
+@section('js')
+    <script>
+        var info = "{{session('info')}}";
+        if (info) {
+            Swal.fire({
+                type: 'success',
+                title: '{{session('info')}}',
+                showConfirmButton: false,
+                timer: 2500
+            })
+        }
+    </script>
+@stop

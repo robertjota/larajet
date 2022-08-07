@@ -296,6 +296,13 @@ return [
         ],
 
         [
+            'text'        => 'Visor de Logs',
+            'url'         => '/log-viewer',
+            'icon'        => 'fas fa-fw fa-book',
+            'can'  => 'log-viewer',
+        ],
+
+        [
             'text' => 'Categorias',
             'route'  => 'admin.categories.index',
             'icon' => 'fab fa-fw fa-buffer',
