@@ -12,7 +12,7 @@
         <h2 class="card-title">Hola Mundo</h2>
     </div>
     <div class="card-body">
-        <p>Esto es un ejemplo de como crear un dashboard</p>
+        <p>Estructura base del adminlite</p>
     </div>
 </div>
 @stop

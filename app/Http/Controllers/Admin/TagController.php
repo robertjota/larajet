@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class TagController extends Controller
 {
@@ -56,7 +57,7 @@ class TagController extends Controller
         ]);
 
         $tag = Tag::create($request->all());
-
+        Log::info('Etiqueta creada: ' . $tag->name . 'por: ' . auth()->user()->name);
         return redirect()->route('admin.tags.index', $tag)->with('info', 'La etiqueta se creo con éxito');
     }
 
@@ -89,7 +90,7 @@ class TagController extends Controller
             'pink' => 'Color Rosado'
 
         ];
-
+        Log::info('Etiqueta editada: ' . $tag->name . 'por: ' . auth()->user()->name);
         return view('admin.tags.edit', compact('tag', 'colors'));
     }
 
@@ -122,7 +123,7 @@ class TagController extends Controller
     public function destroy(Tag $tag)
     {
         $tag->delete();
-
+        Log::info('Etiqueta eliminada: ' . $tag->name . ' por: ' . auth()->user()->name);
         return redirect()->route('admin.tags.index', $tag)->with('info', 'La etiqueta se eliminó con éxito');
     }
 }

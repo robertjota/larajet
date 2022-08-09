@@ -316,6 +316,13 @@ return [
             'active' => ['admin/tags*'],
             'can'  => 'admin.tags.index',
         ],
+        [
+            'text' => 'Calendario',
+            'route'  => 'admin.eventos.index',
+            'icon' => 'far fa-fw fa-calendar',
+            'active' => ['admin/eventos*'],
+            'can'  => 'admin.eventos.index',
+        ],
 
         ['header' => 'OPCIONES DE BLOG'],
 
@@ -440,7 +447,52 @@ return [
                 ],
             ],
         ],
+        'FullCalendar' => [
+            'active' => true,
+            'files' => [
+                // Core
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/fullcalendar-5.11.2/lib/main.min.js',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => 'vendor/fullcalendar-5.11.2/lib/main.min.css',
+                ],
+                // Locales
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/fullcalendar-5.11.2/lib/locales-all.js',
+                ],
+                // Daygrid plugin.
+                /* [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/fullcalendar-plugins/daygrid/main.min.js',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => 'vendor/fullcalendar-plugins/daygrid/main.min.css',
+                ],
+                // Bootstrap 4 plugin.
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/fullcalendar-plugins/bootstrap/main.min.js',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => 'vendor/fullcalendar-plugins/bootstrap/main.min.css',
+                ], */
+            ],
+        ],
     ],
+
 
     /*
     |--------------------------------------------------------------------------
