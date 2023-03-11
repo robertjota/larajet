@@ -2,13 +2,16 @@
 
 namespace Database\Factories;
 
+use App\Models\Image;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Smknstd\FakerPicsumImages\FakerPicsumImagesProvider;
+
+
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Image>
  */
 class ImageFactory extends Factory
 {
+    protected $model = Image::class;
     /**
      * Define the model's default state.
      *
@@ -16,11 +19,8 @@ class ImageFactory extends Factory
      */
     public function definition()
     {
-        $faker = \Faker\Factory::create();
-        $faker->addProvider(new FakerPicsumImagesProvider($faker));
         return [
-            'url' => 'posts/'.$faker->image('public/storage/posts',640,480, false) //posts/image.jpg
+            'url' => 'posts/' .  $this->faker->image('public/storage/posts', 640, 480, null, false) //posts/image.jpg
         ];
-
     }
 }
